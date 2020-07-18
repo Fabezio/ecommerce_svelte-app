@@ -11,7 +11,7 @@
 		</a></li>
 		<!-- <li><a href='.'>
 		</a></li> -->
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">accueik</a></li>
+		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">accueil</a></li>
 		<li><a aria-current="{segment === 'products' ? 'page' : undefined}" href="products">produits</a></li>
 		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">à propos</a></li>
 
@@ -49,6 +49,7 @@
 	[aria-current] {
 		position: relative;
 		display: inline-block;
+		text-transform: uppercase;
 	}
 
 	[aria-current]::after {
@@ -67,6 +68,7 @@
 		text-decoration: none;
 		padding: 1em 0.5em;
 		display: block;
+		font-variant: small-caps;
 	}
 	/* img {
 		height: 48px;
@@ -79,6 +81,7 @@
 		margin-top: 0.25rem;
 		margin-right: 1rem;
 		padding: auto	 0.75rem;
+		text-transform: uppercase;
 		
 	}
 </style>
