@@ -39,8 +39,16 @@ a {
 
 button, h2 {
 	font-variant: small-caps;
-}
 
+}
+button {
+	/* height: 1.5rem; */
+	width: 100%;
+	font-size: 1rem;
+	padding: 5px;
+	border: none;
+	border-radius: 3px;
+}
 code {
 	font-family: menlo, inconsolata, monospace;
 	font-size: calc(1em - 2px);

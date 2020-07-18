@@ -6,6 +6,7 @@
 	// $: console.log(products)
 </script>
 
+
 <Header pagetitle='accueil' />
 
 <p>Bienvenue!</p>
