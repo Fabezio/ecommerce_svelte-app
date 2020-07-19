@@ -1,9 +1,16 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+	// import Header from '../components/UI/Header.svelte'
 	let mainTitle = 'ecommerce'
 	export let segment;
 </script>
 
+<Nav {segment}/>
+
+<main>
+	<!-- <Header pagetitle={segment} /> -->
+	<slot></slot>
+</main>
 
 <style>
 	main {
@@ -16,8 +23,14 @@
 	}
 </style>
 
-<Nav {segment}/>
 
-<main>
-	<slot></slot>
-</main>
+<!-- src/routes/_layout.html -->
+<!-- {#if 	segment === 'login'}
+	<svelte:component this={child.component} {...child.props}/>
+{:else}
+	<div class="fancy-layout">
+		<svelte:component this={child.component} {...child.props}/>
+	</div>
+{/if} -->
+
+

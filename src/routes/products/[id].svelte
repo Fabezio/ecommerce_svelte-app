@@ -17,6 +17,8 @@
 <script>
 	// import products from './products'
 	import Rating from '../../components/main/Rating.svelte'
+	import Price from '../../components/main/Price.svelte'
+	import Quantity from '../../components/main/Quantity.svelte'
 	import Header from '../../components/UI/Header.svelte'
 	export let product
 	let icon='star'
@@ -30,11 +32,12 @@
 
 </script>
 
-<Header pagetitle='Produit:{product.name}'  />
+<Header pagetitle='Produit: {product.name}'  />
 
 <div class="detail">
-	<figure class="image">
-  	<img src={product.image} alt='product-name'>
+	<figure class="image"  class:empty-thumbnail={!product.image}>
+		
+  	<img src={product.image} alt={product.image? product.name : 'Image non disponible'}>
 	</figure>
 	<div class="content">
 		<p>{product.name}</p>
@@ -43,22 +46,8 @@
 			<q>{product.comment}</q>
 		</code>
 		<Rating rating={product.rating} />
-		{#if product.quantity}
-				<p>{product.quantity} articles available
-					{#if product.quantity < 10}
-					<span>, almost empty</span>
-					{/if}
-				</p>
-				
-				{:else}
-				<p>not available</p>
-				{/if}
-				<p>price: 
-				{#if product.price}
-				<span>{product.price}</span>
-				{:else}
-				<span>free</span>
-				{/if}
+		<Quantity quantity={product.quantity} />
+		<Price price={product.price} />
 		<!-- {#if product.rating}
 			<p>Rating: {product.rating}/5
 			{#each fullRating as el}
@@ -99,9 +88,24 @@
 
 	}
 
-		figure, img {
-			/* max-width: 66%; */
-		}
+	figure, img {
+		width: 400px;
+		height: 400px;
+	}
+	.empty-thumbnail {
+		background: url('/images/robes.jpg');
+		background-size: cover;
+	}
+	img[alt] {
+		position: relative;
+		right: 7px;
+		top: 5px;
+		color: orange;
+		font-weight: 200;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
 	a {
 		float: right;
 	}

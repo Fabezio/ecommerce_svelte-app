@@ -1,0 +1,7 @@
+<script>
+
+</script>
+
+<h1>
+  Gestion des stocks
+</h1>

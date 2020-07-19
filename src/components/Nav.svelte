@@ -1,8 +1,26 @@
 <script>
+
+	import Modal from './UI/Modal.svelte' 
+	import LoginForm from './main/LoginForm.svelte' 
 	export let segment;
 	export let mainTitle = 'eCommerce';
-</script>
+	let user ='normal'
+	let modal = false
+	const rootname = 'joane'
+	const rootpw = 'jfaiskejeveu'
+	let rootpage = false
+	// function openModal()
+	// $: if()
 
+</script>
+<!-- src/routes/_layout.html -->
+<!-- {#if child.segment === 'login'}
+	<svelte:component this={child.component} {...child.props}/>
+{:else}
+	<div class="fancy-layout">
+		<svelte:component this={child.component} {...child.props}/>
+	</div>
+{/if} -->
 <nav>
 	<ul>
 		<li id='brand'><a href='.'>
@@ -19,6 +37,22 @@
 		     the blog data when we hover over the link or tap it on a touchscreen -->
 		<!-- <li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li> -->
 	</ul>
+	<ul>
+		<li>
+		<button on:click={() => modal = true}>connection</button>
+		</li>
+	</ul>
+		{#if modal }
+		<p>je suis une boite modal</p>
+		<Modal >
+			<div slot='content'>
+
+				<LoginForm />
+			</div>
+
+			<button slot='button' on:click={() => modal = false}>fermer</button>
+		</Modal>
+		{/if}
 </nav>
 
 

@@ -10,6 +10,8 @@
 	import products from './_products'
 	import Card from '../../components/main/Card.svelte'
 	import Rating from '../../components/main/Rating.svelte'
+	import Price from '../../components/main/Price.svelte'
+	import Quantity from '../../components/main/Quantity.svelte'
 	
 	import Header from '../../components/UI/Header.svelte'
 	// export let products;
@@ -25,31 +27,17 @@
 		<figure>
 			
 			<div class="image" class:empty-thumbnail={!product.image}>
-				<img src={product.image} alt="">
+				<img src={product.image} alt={product.image? product.name : 'Image non disponible'} >
 
 			</div>
 			<figcaption>
 				<p>{product.name}
-				<br>{product.description}</p>
-				<q>{product.comment}</q>
+				<!-- <br>{product.description}</p> -->
+				<!-- <q>{product.comment}</q> -->
 				<Rating rating={product.rating } />
-				{#if product.quantity}
-				<p>{product.quantity} articles available
-					{#if product.quantity < 10}
-					<span>, almost empty</span>
-					{/if}
-				</p>
 				
-				{:else}
-				<p>not available</p>
-				{/if}
-				<p>price: 
-				{#if product.price}
-				<span>{product.price}</span>
-				{:else}
-				<span>free</span>
-				{/if}
-				</p>
+				<!-- <Quantity quantity={product.quantity} /> -->
+				<Price price={product.price} />
 			</figcaption>
 		</figure>
 		<a class="link" rel="prefetch" href="/products/{product.id}">Voir
@@ -75,6 +63,20 @@
 		grid-template-columns: repeat(5, 1fr);
 
 	}
+	.image img[alt] {
+		/* position: relative;
+		right: 7px;
+		top: 5px; */
+		color: gold;
+		font-weight: 200;
+		display: flex;
+		/* justify-content: flex-end;
+		align-items: flex-start; */
+		text-shadow: 1px 1px black;
+		background: rgba(0, 0,0 , 0.1);
+		/* width: 100%; */
+		/* padding: 1rem; */
+	}
 	
 	figure {
 		margin: auto;
@@ -94,7 +96,9 @@
 	}
 
 	.empty-thumbnail {
-		background: repeating-linear-gradient(135deg, grey , silver 25%);
+		background: url('/images/robes.jpg');
+		background-size: cover;
+		/* background: repeating-linear-gradient(135deg, grey , silver 25%); */
 		/* position: relative; */
 		/* margin: auto; */
 

@@ -14,5 +14,5 @@
   {/each}
   </p>
 {:else}
-  <p>not rated yet</p>
+  <p>Pas encore d'avis</p>
 {/if}
