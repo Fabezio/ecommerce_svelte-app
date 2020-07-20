@@ -1,6 +1,6 @@
 <script>
 	export let segment;
-	export let mainTitle = 'eCommerce';
+	export let mainTitle = 'Administration';
 	
 	
 	// function openModal()
@@ -23,9 +23,9 @@
 		</a></li>
 		<!-- <li><a href='.'>
 		</a></li> -->
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">accueil</a></li>
-		<li><a aria-current="{segment === 'products' ? 'page' : undefined}" href="products">produits</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">à propos</a></li>
+		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href="api">produits</a></li>
+		<li><a aria-current="{segment === 'users' ? 'page' : undefined}" href="users">abonnés</a></li>
+		<li><a aria-current="{segment === 'comments' ? 'page' : undefined}" href="comments">avis</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->

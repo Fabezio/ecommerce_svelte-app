@@ -1,11 +1,24 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+	import ApiNav from '../components/Api/ApiNav.svelte';
+	import User from '../components/User.svelte';
 	// import Header from '../components/UI/Header.svelte'
-	let mainTitle = 'ecommerce'
+	// let mainTitle = 'ecommerce'
+	let user = ""
+	let pw  = ""
+	let root = false
 	export let segment;
 </script>
 
-<Nav {segment}/>
+{#if root}
+	<ApiNav {segment}/>
+{:else}
+	<Nav {segment}/>
+{/if}
+
+<!-- <User {user} {root}/> -->
+<User {user} {root} {pw} />
+	
 
 <main>
 	<!-- <Header pagetitle={segment} /> -->
