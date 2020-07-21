@@ -3,6 +3,15 @@
 	import Header from '../components/UI/Header.svelte'
 </script>
 
-<Header pagetitle='A propos' />
+<template lang="pug" >
+	Header (pagetitle='A propos')
 
-<p>Pas grand chose à décrire pour le moment...</p>
+	p Pas grand chose à décrire pour le moment...
+	p.green vraiment pas grab$nd chose
+</template>
+
+<style>
+ .green {
+	 color: teal;
+ }
+</style>
