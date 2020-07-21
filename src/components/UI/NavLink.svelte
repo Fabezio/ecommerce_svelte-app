@@ -12,7 +12,7 @@
 {#if hasPrefetch}
   <a rel=prefetch aria-current="{segment === {link} ? 'page' : undefined}" href="{path}{link}">{label}</a>
 {:else}
-  {#if link='.'}
+  {#if link=='.'}
     <a aria-current="{segment === undefined ?  'page' : undefined}" href={link}>{label}</a>
   {:else}
     <a aria-current="{segment === {link} ? 'page' : undefined}" href='{path}{link}'>{label}</a>

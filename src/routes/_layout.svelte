@@ -9,12 +9,19 @@
 
 <script>
 	import Nav from '../components/Nav.svelte';
+	import rootUser from '../components/API/.rootUser'
 	import User from '../components/User.svelte';
-	let root = true
+	let root 
 	export let segment;
 	let user = ""
 	let pw = ""
 	let navType
+
+	$: user = rootUser.name || 'machin'
+	$: user = rootUser.isRoot || false
+	// $: user = rootUser.name
+
+	$: console.log(rootUser)
 
 </script>	
 	<Nav {segment} {root} />

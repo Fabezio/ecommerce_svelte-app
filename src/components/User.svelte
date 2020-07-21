@@ -1,69 +1,44 @@
 <script>
-
-	// import Modal from './UI/Modal.svelte' 
-	// import LoginForm from './main/LoginForm.svelte' 
-	
   export let user
-  export let root 
+  export let root
   export let pw
-
   let loginDisplay = false
-  let modal  = false
+  let modal = false
   let firstLog = true
-  let isLogged   = false
+  let isLogged = false
   let disabled = true
-  // $: 
-
   $: isLogged = user.length > 0 ? true : false
-
-  // formulaire 
-
-  // let pw = ''
-	// let user ='normal'
-	const rootname = 'joane'
-	const rootpw = 'root'
-	// let rootpage = false
-  function enableSubmit() {
-    }
+  const rootname = 'joane'
+  const rootpw = 'root'
+  function enableSubmit() {}
   $: {
-    if(user.length > 0 && pw.length > 0) {
+    if (user.length > 0 && pw.length > 0) {
       console.log('nom:', user.length)
       console.log('pw:', pw.length)
       disabled = false
-      // console.log(user, pw)
-      } else {
-      disabled = true     
+    } else {
+      disabled = true
     }
   }
-  
+
   function submitForm() {
     loginDisplay = false
     return (user, pw)
-    // return user, pw
   }
-  
-    // $: console.log(pw)
-    $: console.log('root:', root)
-  function logOut() {
-    if(!isLogged) return
-      isLogged = false
-      user = ""
-      root = false
-      firstLog = false
-  }
-	$: {
-    if (user === rootname && pw === rootpw) {
-      // user = 'admin'
-      root = true
-      // modal = false
-    }
-		
-	}
-  // const dispatch = createEventDispatcher()
-  // function sendData() {
-  //   return user, root
-  // }
+  $: console.log('root:', root)
 
+  function logOut() {
+    if (!isLogged) return
+    isLogged = false
+    user = ""
+    root = false
+    firstLog = false
+  }
+  $: {
+    if (user === rootname && pw === rootpw) {
+      root = true
+    }
+  }
 </script>
 		
 		<section>
@@ -102,7 +77,7 @@
 		    {#if root}
 		      
 						<button>
-							<a href='api' >
+							<a href='api' on:click={()=> root = true} >
 		          administrer
 		        </a>
 						</button>
