@@ -3,26 +3,13 @@
 	export let segment;
 	export let root;
 	export let mainTitle = 'eCommerce';
-
 	$: if (root) mainTitle = 'administration'
-
 	$: console.log('segment')
 	$: console.log(typeof segment)
-	$: console.log( segment)
-	
-	
-	// function openModal()
-	// $: if()
+	$: console.log(segment)
 
 </script>
-<!-- src/routes/_layout.html -->
-<!-- {#if child.segment === 'login'}
-	<svelte:component this={child.component} {...child.props}/>
-{:else}
-	<div class="fancy-layout">
-		<svelte:component this={child.component} {...child.props}/>
-	</div>
-{/if} -->
+
 <nav>
 	<ul>
 		<li id='brand'><a href='.'>
@@ -41,8 +28,3 @@
 		
 	</ul>
 </nav>
-
-
-<style>
-	
-</style>

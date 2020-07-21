@@ -65,58 +65,63 @@
   // }
 
 </script>
-
-<section>
-  {#if loginDisplay}
-    <!-- <form on:submit|preventDefault={submitForm} > -->
-    <div class="form">
-      <label >Identifiant: 
-        <input type="text"bind:value={user} >
-      </label>
-      <label >Mot de passe: 
-        <input type="password" bind:value={pw} >
-      </label>
-      <button {disabled} type="submit" on:click={submitForm}>entrer</button>
-    </div>
-    <!-- </form> -->
-  {:else}
-    {#if !user.length}
-      {#if firstLog}
-        <p>Vous n'êtes pas connecté.e</p>
-      {:else}
-        <p>Vous êtes déconnecté.e</p>
-      {/if}
-    {:else}
-      <p>
-        {user}<span>{root ?  ' (admin)' : '' }</span>
-      </p>
-    {/if}
-    
-  <div>
-    {#if root}
-      <button>
-        <a href='api' >
-          administrer
-        </a>
-      </button>
-    {/if}
-      
-    {#if isLogged}
-      <button on:click={logOut}>Déconnexion</button>
-    {:else}
-      <button on:click={()=> loginDisplay = true}>Connexion</button>
-    {/if}
-  </div>
-
-  {/if}
-
-  
-      <!-- <button>Me connecter</button> -->
-  
-  
-
-</section>
-
+		
+		<section>
+		  {#if loginDisplay}
+		    
+			<div class="form">
+				<label >Identifiant: 
+		        
+					<input type="text"bind:value={user} >
+					</label>
+					<label >Mot de passe: 
+		        
+						<input type="password" bind:value={pw} >
+						</label>
+						<button {disabled} type="submit" on:click={submitForm}>entrer</button>
+					</div>
+		  {:else}
+		    {#if !user.length}
+		      {#if firstLog}
+		        
+					<p>Vous n'êtes pas connecté.e</p>
+		      {:else}
+		        
+					<p>Vous êtes déconnecté.e</p>
+		      {/if}
+		    {:else}
+		      
+					<p>
+		        {user}
+						<span>{root ?  ' (admin)' : '' }</span>
+					</p>
+		    {/if}
+		    
+		  
+					<div>
+		    {#if root}
+		      
+						<button>
+							<a href='api' >
+		          administrer
+		        </a>
+						</button>
+		    {/if}
+		      
+		    {#if isLogged}
+		      
+						<button on:click={logOut}>Déconnexion</button>
+		    {:else}
+		      
+						<button on:click={()=> loginDisplay = true}>Connexion</button>
+		    {/if}
+		  
+					</div>
+		
+		  {/if}
+		
+				</section>
+		
 <style>
   section {
     display: flex;
@@ -126,9 +131,10 @@
     border-bottom: 1px solid rgba(0,0,255, 0.05);
     background: rgba(0,0,0, 0.05);
   }
+
   .form {
     width: 70%;
-    margin: auto; 
+    margin: auto;
   }
 
 </style>

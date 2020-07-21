@@ -7,6 +7,7 @@
   // $: if (link === '.')
 </script>
 
+
 <li>
 {#if hasPrefetch}
   <a rel=prefetch aria-current="{segment === {link} ? 'page' : undefined}" href="{path}{link}">{label}</a>
@@ -18,9 +19,3 @@
   {/if}
 {/if}
 </li>
-
-<style>
-
-</style>
-
-  

@@ -3,5 +3,5 @@
 
 </script>
 
-<Header pagetitle='Gestion des stocks' />
+<Header pagetitle='Gestion des utilisateurs' />
   

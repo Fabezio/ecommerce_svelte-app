@@ -1,31 +1,20 @@
 <script>
-  import {createEventDispatcher} from 'svelte'
-  // export let rootname
-  // export let rootpw
-  // export let name = ""
-  // export let passwd = ""
+  import { createEventDispatcher } from 'svelte'
   export let user
   export let root
-  // let name = ''
-	let pw = ''
-	// let user ='normal'
-	const rootname = 'joane'
-	const rootpw = 'jfaiskejveu'
-	// let rootpage = false
-	function isRoot() {
-		if (user === rootname && pw === rootpw) {
-			// user = 'admin'
-			root = true
-			// modal = false
-		}
-	}
+  let pw = ''
+  const rootname = 'joane'
+  const rootpw = 'jfaiskejveu'
+  function isRoot() {
+    if (user === rootname && pw === rootpw) {
+      root = true
+    }
+  }
   const dispatch = createEventDispatcher()
+
   function sendData(e) {
     user = e.target.user
   }
-	$: console.log(user)
-	// $: console.log(pw)
-  $: console.log('root:', root)
   
 </script>
 

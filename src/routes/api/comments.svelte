@@ -1,7 +1,7 @@
 <script>
+  import Header from '../../components/UI/Header.svelte'
 
 </script>
 
-<h1>
-  Gestion des stocks
-</h1>
+<Header pagetitle='Gestion des Commentaires' />
+  

@@ -71,31 +71,30 @@
 		  -->
 <a href="products">Retour à la liste</a>
 
-<style>
+	<style>
 	.detail {
 		display: flex;
-		/* grid-template-columns: repeat(2, 1fr);
-		grid-gap: 1rem; */
-		
 		justify-content: center;
 	}
+
 	.image {
 		display: block;
 	}
-	.content {
-		/* grid-column: 1/2; */
-		text-align: left;
 
+	.content {
+		text-align: left;
 	}
 
 	figure, img {
 		width: 400px;
 		height: 400px;
 	}
+
 	.empty-thumbnail {
 		background: url('/images/robes.jpg');
 		background-size: cover;
 	}
+
 	img[alt] {
 		position: relative;
 		right: 7px;
@@ -106,6 +105,7 @@
 		justify-content: flex-end;
 		align-items: flex-start;
 	}
+
 	a {
 		float: right;
 	}
