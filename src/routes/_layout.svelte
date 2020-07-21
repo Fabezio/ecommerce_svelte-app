@@ -8,6 +8,7 @@
 </script> -->
 
 <script>
+
 	import Nav from '../components/Nav.svelte';
 	import rootUser from '../components/API/.rootUser'
 	import User from '../components/User.svelte';
@@ -30,7 +31,8 @@
 		<slot></slot>
 	</main>
 	
-<style>
+<style lang='scss' global>
+	@import "../style/global.scss";
 	main {
 		position: relative;
 		/* max-width: 56em; */
