@@ -5,11 +5,12 @@
 	
   export let user
   export let root 
-  export let pw = ''
+  export let pw
+
   let loginDisplay = false
-  let modal = false
+  let modal  = false
   let firstLog = true
-  let isLogged  = false
+  let isLogged   = false
   let disabled = true
   // $: 
 
@@ -20,7 +21,7 @@
   // let pw = ''
 	// let user ='normal'
 	const rootname = 'joane'
-	const rootpw = 'jfaiskejveu'
+	const rootpw = 'root'
 	// let rootpage = false
   function enableSubmit() {
     }
@@ -36,6 +37,7 @@
   }
   
   function submitForm() {
+    loginDisplay = false
     return (user, pw)
     // return user, pw
   }
@@ -49,7 +51,7 @@
       root = false
       firstLog = false
   }
-	function isRoot() {
+	$: {
     if (user === rootname && pw === rootpw) {
       // user = 'admin'
       root = true

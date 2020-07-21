@@ -1,23 +1,36 @@
+<!-- <script context="module">
+	import { onMount } from 'svelte'
+	onMount(() => {
+
+	})
+
+
+</script> -->
+
 <script>
 	import Nav from '../components/Nav.svelte';
-	import ApiNav from '../components/Api/ApiNav.svelte';
+	// import ApiNav from '../components/Api/ApiNav.svelte';
 	import User from '../components/User.svelte';
 	// import Header from '../components/UI/Header.svelte'
 	// let mainTitle = 'ecommerce'
-	let user = ""
-	let pw  = ""
-	let root = false
+	// export let root
+	let root = true
 	export let segment;
+	let user = ""
+	let pw = ""
+	let navType 
+
+	
+
+	
+	// let displayApi = false
+	// $: displayApi = root == true ? true : false 
 </script>
 
-{#if root}
-	<ApiNav {segment}/>
-{:else}
-	<Nav {segment}/>
-{/if}
+<Nav {segment} {root} />
+<User {user} {root} {pw} />
 
 <!-- <User {user} {root}/> -->
-<User {user} {root} {pw} />
 	
 
 <main>
