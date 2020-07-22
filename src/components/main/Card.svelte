@@ -2,14 +2,15 @@
   <slot />
 </div>
 
-<style>
+<style lang='scss'>
+@import '../../style/theme.scss';
   .card {
     width: 200px;
-    box-shadow: 1rem 1rem 1rem skyblue;
+    // box-shadow: 1rem 1rem 1rem $primary-color;
     border-radius: 1rem;
-    border: 1px solid aqua;
+    border: 1px solid transparent;
     padding: 1rem;
     margin: 1rem auto;
-    background: skyblue;
+    background: $accent-color;
   }
 </style>

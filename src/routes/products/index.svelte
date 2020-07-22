@@ -35,7 +35,9 @@
 					<Price price={product.price} />
 				</figcaption>
 			</figure>
+			<div class="link-container">
 			<a class="link" rel="prefetch" href="/products/{product.id}">Voir</a>
+			</div>
 		</Card>
 	{/each}
 </section>
@@ -94,7 +96,6 @@
 	// }
 
 	.link {
-		width: 100%;
 		font-size: 1rem;
 		padding: 5px;
 		border: none;
@@ -104,6 +105,10 @@
 		text-align: center;
 		text-decoration: none;
 		font-variant: small-caps;
+	}
+	.link-container {
+		width: 200px;
+
 	}
 
 	figcaption p {
