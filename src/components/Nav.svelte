@@ -22,7 +22,7 @@
 		</a></li>
 		<!-- {#each links as link} -->
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">accueil</a></li>
-		<li><a aria-current="{segment === 'products' ? 'page' : undefined}" href="products" rel='prefetch'>produits</a></li>
+		<li><a aria-current="{segment === 'products' ? 'page' : undefined}" href="products" >produits</a></li>
 		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">à propos</a></li>
 		<!-- {/each} -->
 		

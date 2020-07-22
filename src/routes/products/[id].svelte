@@ -37,7 +37,7 @@
 <div class="main">
 <div class="detail">
 	<figure>
-		<div class="image" class:empty-thumbnail={!product.image}>
+		<div class={product.image ? "image" : "empty-thumbnail"}>
   		<img src={product.image} alt={product.image? product.name : 'Image non disponible'}>
 		</div>
 	</figure>
@@ -57,8 +57,8 @@
   
 <a href="products">Retour à la liste</a>
 
-<style>
-
+<style lang="scss" > 
+@import '../../style/theme.scss';
 	.main {
 		display: block;
 		width: 800px;
@@ -83,12 +83,16 @@
 		padding: 0;
 		text-align: center;
 	}
+	.image {
+		background: $glass;
+		
+		}
 
-	figure, img {
+	img {
 		max-width: 400px;
 		max-height: 400px;
 	}
-	.empty-thumbnail img {
+	.empty-thumbnail , .image {
 		width: 400px;
 		height: 400px;
 		
