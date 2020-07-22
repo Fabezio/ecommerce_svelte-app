@@ -97,14 +97,17 @@
 		
 				</section>
 		
-<style>
+<style lang="scss" >
+@import '../../style/theme.scss';
+
   section {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 5px 8px;
-    border-top: 1px solid rgba(0,0,255, 0.05);
-    border-bottom: 1px solid rgba(0,0,255, 0.05);
-    background: rgba(0,0,0, 0.05);
+    padding: 0px 8px;
+    border-top: 1px solid $primary-color;
+    border-bottom: 1px solid $accent-color;
+    background: $glass;
   }
 
   .form {

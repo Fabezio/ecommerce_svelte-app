@@ -26,6 +26,7 @@
 
 </script>	
 	<Nav {segment} {root} />
+	<hr>
 	<User {user} {root} {pw} />
 	<main>
 		<slot></slot>
@@ -54,6 +55,12 @@ footer {
 	text-align: center;
 	background: $glass;
 
+}
+hr {
+	color: $accent-color;
+	padding: 0;
+	margin: 0;
+	opacity: 0.25;
 }
 </style>
 

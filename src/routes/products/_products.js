@@ -4,19 +4,21 @@
 //   {id: 'p1', name: 'arcicle 1', description: 'incredible product' },
 //   {id: 'p2', name: 'article 2', description: 'incredible product 2' }
 // ])
-const products = [{
-        category: 'robe',
-        id: 'p1 ',
-        image: 'https://thumbs.dreamstime.com/z/robe-dans-le-vecteur-v%C3%AAtements-de-dessin-de-main-cru-mode-85324129.jpg',
-        name: 'robe',
-        description: 'robe',
-        comment: 'Magnifique!',
-        rating: 5,
-        price: 19.99
-    },
+const products = [
+
+    // {
+    //     id: 'p1 ',
+    //     category: 'vêtements',
+    //     image: 'https://thumbs.dreamstime.com/z/robe-dans-le-vecteur-v%C3%AAtements-de-dessin-de-main-cru-mode-85324129.jpg',
+    //     name: 'robe',
+    //     description: 'robe stylisée',
+    //     comment: 'Magnifique!',
+    //     rating: 5,
+    //     price: 19.99
+    // },
     {
-        category: 'poster',
         id: 'p2',
+        category: 'poster',
         name: 'Obama',
         description: 'Yes we can!',
         comment: 'Where is Michelle?',
@@ -46,8 +48,8 @@ const products = [{
         comment: 'Magnifique!'
     },
     {
-        category: null,
         id: "p5",
+        category: null,
         name: 'rien pour le moment',
         description: 'que dalle '
     }
