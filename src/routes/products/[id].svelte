@@ -16,6 +16,7 @@
 
 <script>
 	// import products from './products'
+	// import Card from '../../components/main/Card.svelte'
 	import Rating from '../../components/main/Rating.svelte'
 	import Price from '../../components/main/Price.svelte'
 	import Quantity from '../../components/main/Quantity.svelte'
@@ -33,77 +34,64 @@
 </script>
 
 <Header pagetitle='Produit: {product.name}'  />
-
+<div class="main">
 <div class="detail">
-	<figure class="image"  class:empty-thumbnail={!product.image}>
-		
-  	<img src={product.image} alt={product.image? product.name : 'Image non disponible'}>
+	<figure>
+		<div class="image" class:empty-thumbnail={!product.image}>
+  		<img src={product.image} alt={product.image? product.name : 'Image non disponible'}>
+		</div>
 	</figure>
+		
 	<div class="content">
+		<p>{product.category}</p>
 		<p>{product.name}</p>
 		<p>Description: {product.description}</p>
-		<code>
-			<q>{product.comment}</q>
-		</code>
+		<q>{product.comment}</q>
 		<Rating rating={product.rating} />
 		<Quantity quantity={product.quantity} />
 		<Price price={product.price} />
-		<!-- {#if product.rating}
-			<p>Rating: {product.rating}/5
-			{#each fullRating as el}
-				<span class="{el}"></span>
-			{/each}
-			</p>
-		{:else}
-			<p>not rated yet</p>
-		{/if} -->
-
 	</div>
 	
-
-<!-- id: {product.id} -->
 </div>
-
-  <!--
-<div>
-		 {@html product.html}
 </div>
-		  -->
+  
 <a href="products">Retour à la liste</a>
 
-	<style>
+<style>
+
+	.main {
+		display: block;
+		width: 800px;
+		
+		margin: auto; 
+
+	}
 	.detail {
 		display: flex;
-		justify-content: center;
-	}
-
-	.image {
-		display: block;
+		/* grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1rem;
+			*/
+		justify-content: flex-start	;
 	}
 
 	.content {
 		text-align: left;
+		padding: 0;
+	}
+	figure {
+		/* margin: auto; */
+		padding: 0;
+		text-align: center;
 	}
 
 	figure, img {
+		max-width: 400px;
+		max-height: 400px;
+	}
+	.empty-thumbnail img {
 		width: 400px;
 		height: 400px;
-	}
-
-	.empty-thumbnail {
-		background: url('/images/robes.jpg');
-		background-size: cover;
-	}
-
-	img[alt] {
-		position: relative;
-		right: 7px;
-		top: 5px;
-		color: orange;
-		font-weight: 200;
-		display: flex;
-		justify-content: flex-end;
-		align-items: flex-start;
+		
 	}
 
 	a {

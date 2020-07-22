@@ -5,7 +5,8 @@
 //   {id: 'p2', name: 'article 2', description: 'incredible product 2' }
 // ])
 const products = [{
-        id: 'p1',
+        category: 'robe',
+        id: 'p1 ',
         image: 'https://thumbs.dreamstime.com/z/robe-dans-le-vecteur-v%C3%AAtements-de-dessin-de-main-cru-mode-85324129.jpg',
         name: 'robe',
         description: 'robe',
@@ -14,6 +15,7 @@ const products = [{
         price: 19.99
     },
     {
+        category: 'poster',
         id: 'p2',
         name: 'Obama',
         description: 'Yes we can!',
@@ -25,6 +27,7 @@ const products = [{
     },
     {
         id: 'p3',
+        category: 'poster',
         image: 'https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
         name: 'sunrise',
         description: 'lever de soleil',
@@ -36,12 +39,18 @@ const products = [{
 
     {
         id: 'p4',
+        category: 'poster',
         image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg',
         name: 'sunset',
         description: 'crépuscule',
         comment: 'Magnifique!'
     },
-    { id: "p5", name: 'rien pour le moment', 'description': 'que dalle' }
+    {
+        category: null,
+        id: "p5",
+        name: 'rien pour le moment',
+        description: 'que dalle '
+    }
 
 ]
 export default products

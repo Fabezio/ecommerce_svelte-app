@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     color: whitesmoke;
     height: 100vh;
@@ -140,6 +140,37 @@ nav [aria-current]::after {
     /* opacity: 0.7;	 */
     display: block;
     bottom: -1px;
+}
+
+// images
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 200px;
+    // height: 200px;
+}
+
+.empty-thumbnail {
+    background: url('/images/robes.jpg');
+    display: flex;
+    background-size: cover;
+    // margin: auto;
+}
+
+.empty-thumbnail [alt] {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: gold;
+    display: flex;
+    font-weight: 200;
+    justify-content: center;
+    margin: auto;
+    padding: 7px 0;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    width: 100%;
+    z-index: 10;
 }
 
 
