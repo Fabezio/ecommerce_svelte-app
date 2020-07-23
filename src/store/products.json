@@ -1,6 +1,5 @@
-const products = {
-
-    "name": "produits",
+{
+    // "name": "produits",
     "categories": [{
         "name": "robes",
         "content": [{
@@ -19,6 +18,4 @@ const products = {
             ]
         }]
     }]
-
 }
-export default products
