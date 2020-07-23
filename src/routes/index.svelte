@@ -9,7 +9,7 @@
 
 <Header pagetitle='accueil' />
 
-<p>Bienvenue!</p>
+<p class="success-txt">Bienvenue!</p>
 
 <style>
 	p {

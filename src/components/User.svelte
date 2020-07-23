@@ -25,7 +25,7 @@
     loginDisplay = false
     return (user, pw)
   }
-  $: console.log('root:', root)
+  // $: console.log('root:', root)
 
   function logOut() {
     if (!isLogged) return

@@ -16,3 +16,81 @@ $emerald:#50C878;
 $sapphire: #0F52BA;
 $olivine:#9AB973;
 $amethyst:#9966CC;
+// types
+$success: $emerald;
+$warning:$golden;
+$danger: $ruby;
+$info:$sapphire;
+$link:$diamond;
+// categories
+// $darkbtns:success warning danger info;
+// @each $darkbtn in $darkbtns {
+.success-txt {
+    color: $success;
+}
+
+.success-bg {
+    background: $success;
+}
+
+.success-btn {
+    background: $success;
+    color: $dark;
+}
+
+.info-txt {
+    color: $info;
+}
+
+.info-bg {
+    background: $info;
+}
+
+.info-btn {
+    background: $info;
+    color: $dark;
+}
+
+.danger-txt {
+    color: $danger;
+}
+
+.danger-bg {
+    background: $danger;
+}
+
+.danger-btn {
+    background: $danger;
+    color: $dark;
+}
+
+.warning-txt {
+    color: $warning;
+}
+
+.warning-bg {
+    background: $warning;
+}
+
+.warning-btn {
+    background: $warning;
+    color: $dark;
+}
+
+// }
+// $lightbtns: info;
+// @each $lightbtn in $lightbtns {
+.link-txt {
+    color: $link;
+}
+
+.link-bg {
+    background: $link;
+}
+
+.link-btn {
+    background: $link;
+    color: $dark;
+}
+
+// }
