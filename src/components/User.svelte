@@ -13,8 +13,8 @@
   function enableSubmit() {}
   $: {
     if (user.length > 0 && pw.length > 0) {
-      console.log('nom:', user.length)
-      console.log('pw:', pw.length)
+      // console.log('nom:', user.length)
+      // console.log('pw:', pw.length)
       disabled = false
     } else {
       disabled = true
@@ -102,9 +102,11 @@
 
   section {
     display: flex;
+    
     align-items: center;
     justify-content: space-between;
-    padding: 0px 8px;
+    padding: 0rem 8px;
+    height: 3rem;
     border-top: 1px solid $primary-color;
     border-bottom: 1px solid $accent-color;
     background: $glass;

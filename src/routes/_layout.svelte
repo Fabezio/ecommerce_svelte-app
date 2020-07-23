@@ -22,7 +22,7 @@
 	$: user = rootUser.isRoot || false
 	// $: user = rootUser.name
 
-	$: console.log(rootUser)
+	// $: console.log(rootUser)
 
 </script>	
 	<Nav {segment} {root} />
