@@ -34,7 +34,9 @@
   <li>{rate.author}</li>
   <li>{rate.comment}</li>
   <li>
-  <div class="progress" style="background-color: hsl({120 * (rate.rating)/5}, 100%, 50%)">
+  <div class="light">
+  <div class="progress" style="background-color: hsl({120 * (rate.rating)/5}, 100%, 50%); width: {(rate.rating+1)*100/6}%;">
+  </div>
   <!-- {rate.rating} -->
   </div>
   </li>
@@ -67,11 +69,14 @@ ul {
   max-height: 64px;
   border-radius: 50%;
 }
+  .light{background: white; width: 10rem;
+  border-radius: 3px;
+  }
 .progress {
   
-  width: 10rem;
-  height: 10px;
   border-radius: 3px;
+  max-width: 10rem;
+  height: 10px;
 }
 .image, img {max-width: 400px; max-height: 400px;}
 </style>
