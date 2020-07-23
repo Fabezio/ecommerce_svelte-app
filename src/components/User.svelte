@@ -116,6 +116,7 @@
   }
   button {text-transform: uppercase;
   font-variant: normal;
-  // text-shadow: 1px 1px 0 $dark;}
+  // text-shadow: 1px 1px 0 $dark;
+  }
 
 </style>
