@@ -53,7 +53,7 @@
 		        
 						<input type="password" bind:value={pw} >
 						</label>
-						<button {disabled} type="submit" on:click={submitForm}>entrer</button>
+						<button {disabled} class="success-btn" type="submit" on:click={submitForm}>entrer</button>
 					</div>
 		  {:else}
 		    {#if !user.length}
@@ -76,7 +76,7 @@
 					<div>
 		    {#if root}
 		      
-						<button>
+						<button class='link-btn'>
 							<a href='api' on:click={()=> root = true} >
 		          administrer
 		        </a>
@@ -85,10 +85,10 @@
 		      
 		    {#if isLogged}
 		      
-						<button on:click={logOut}>Déconnexion</button>
+						<button class="danger-btn" on:click={logOut}>Déconnexion</button>
 		    {:else}
 		      
-						<button on:click={()=> loginDisplay = true}>Connexion</button>
+						<button class="info-btn" on:click={()=> loginDisplay = true}>Connexion</button>
 		    {/if}
 		  
 					</div>
@@ -98,7 +98,7 @@
 				</section>
 		
 <style lang="scss" >
-@import '../../style/theme.scss';
+@import '../style/theme.scss';
 
   section {
     display: flex;

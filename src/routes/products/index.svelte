@@ -36,7 +36,9 @@
 				</figcaption>
 			</figure>
 			<div class="link-container">
-			<a class="link" rel="prefetch" href="/products/{product.id}">Voir</a>
+			<button class="info-btn fw"	>
+				<a class="" rel="prefetch" href="/products/{product.id}">Voir</a>
+			</button>
 			</div>
 		</Card>
 	{/each}
