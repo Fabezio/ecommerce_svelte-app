@@ -23,6 +23,7 @@
 		<!-- {#each links as link} -->
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">accueil</a></li>
 		<li><a aria-current="{segment === 'products' ? 'page' : undefined}" href="products" >produits</a></li>
+		<li><a aria-current="{segment === 'test' ? 'page' : undefined}" href="test">test</a></li>
 		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">à propos</a></li>
 		<!-- {/each} -->
 		

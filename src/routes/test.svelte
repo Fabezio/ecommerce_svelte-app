@@ -1,5 +1,6 @@
 <script>
   import products from '../store/products.js'
+  import Card from '../components/main/Card.svelte'
   // let data = {
   //   name: 'produits',
   //   categories: [
@@ -15,37 +16,41 @@
 </script>
 
 <div>
-  <ul class='first-degree'>{products.name}:
+  <h1>Produits</h1>
+  <!-- 1: categories -->
   {#each products.categories as cat}
-  <li>{cat.name}
-  <ul class='second-degree'>{#each cat.content as content}
-  <div class="image">
-    <img src={content.image} alt={content.name}>
-  </div>
+    <div>Catégorie: {cat.name}</div>
+    <!-- 2: produits -->
 
-  <li>{content.name}</li>
-  <li>{content.description}</li>
-  <li>
-  <ul class='third-degree'>{#each content.rates as rate}
-  <div>
-    <img class='avatar' src='{rate.avatar}' alt='{rate.author}'>
-  </div>
+    {#each cat.content as content}
+      <Card >
+      <div class="image">
+        <img src={content.image} alt={content.name}>
+      </div>
 
-  <li>{rate.author}</li>
-  <li>{rate.comment}</li>
-  <li>
-  <div class="light">
-  <div class="progress" style="background-color: hsl({120 * (rate.rating)/5}, 100%, 50%); width: {(rate.rating+1)*100/6}%;">
-  </div>
-  <!-- {rate.rating} -->
-  </div>
-  </li>
+      <div>Produit: {content.name}</div>
+      <div>Description: {content.description}</div>
+      <div>Note: {content.rates.reduce()}/5
+      <!-- 3: Evaluations -->
+      <!-- {#each content.rates as rate}
+        <div>
+          <img class='avatar' src='{rate.avatar}' alt='{rate.author}'>
+        </div>
+
+        <div>{rate.author}</div>
+        <div>{rate.comment}</div>
+        <div>
+          <div class="light">
+            <div class="progress" style="background-color: hsl({120 * (rate.rating)/5}, 100%, 50%); width: {(rate.rating+1)*100/6}%;">
+        </div>
+        </div>
+        </div>
+      {/each} -->
+      </div>
+      </Card>
+    {/each}
   {/each}
-  </ul></li>
-  {/each}
-  </ul>
-  {/each}
-  </ul>
+       
 </div>
 
 <style global>
