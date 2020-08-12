@@ -57,8 +57,8 @@
   
 <a href="products">Retour à la liste</a>
 
-<style lang="scss" > 
-@import '../../style/theme.scss';
+<style> 
+/* @import '../../style/theme.scss'; */
 	.main {
 		display: block;
 		width: 800px;
@@ -84,7 +84,7 @@
 		text-align: center;
 	}
 	.image {
-		background: $glass;
+		/* background: $glass; */
 		
 		}
 

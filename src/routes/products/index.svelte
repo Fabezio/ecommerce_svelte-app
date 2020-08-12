@@ -44,8 +44,8 @@
 	{/each}
 </section>
 
-<style lang='scss'>
-	@import '../../style/global.scss';
+<style >
+	/* @import '../../style/global.scss'; */
 	a {
 		display: block;
 	}
@@ -62,9 +62,9 @@
 	}
 
 	.image, .empty-thumbnail {
-		// display: flex;
+		/* // display: flex;
 		// align-items: center;
-		// justify-content: center;
+		// justify-content: center; */
 		width: 200px;
 		height: 200px;
 	}
@@ -77,7 +77,7 @@
 		max-height: 200px;
 	}
 
-	// .empty-thumbnail {
+	/* // .empty-thumbnail {
 	// 	background: url('/images/robes.jpg');
 	// 	display: flex;
 	// 	background-size: cover;
@@ -95,7 +95,7 @@
 	// 	text-shadow: 1px 1px black;
 	// 	background: rgba(0, 0,0 , 0.1);
 	// 	width: 100%;
-	// }
+	// } */
 
 	.link {
 		font-size: 1rem;

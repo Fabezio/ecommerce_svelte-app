@@ -6,7 +6,7 @@ import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
-import sveltePreprocess from 'svelte-preprocess';
+// import sveltePreprocess from 'svelte-preprocess';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -14,18 +14,18 @@ const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 // scss proeprocess plugin
 
-const preprocess = sveltePreprocess({
-    scss: {
-        includePaths: ['src'],
-    },
-    postcss: {
-        plugins: [require('autoprefixer')],
-    },
-    pug: {
-        plugins: [require('pug')],
-    },
+// const preprocess = sveltePreprocess({
+//     scss: {
+//         includePaths: ['src'],
+//     },
+//     postcss: {
+//         plugins: [require('autoprefixer')],
+//     },
+//     pug: {
+//         plugins: [require('pug')],
+//     },
 
-});
+// });
 
 const onwarn = (warning, onwarn) => (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning);
 
@@ -41,7 +41,7 @@ export default {
             svelte({
                 dev,
                 hydratable: true,
-                preprocess,
+                // preprocess,
                 emitCss: true,
             }),
             resolve({
@@ -85,7 +85,7 @@ export default {
             }),
             svelte({
                 generate: 'ssr',
-                preprocess,
+                // preprocess,
                 dev
             }),
             resolve({

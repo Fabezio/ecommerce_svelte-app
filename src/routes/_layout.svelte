@@ -33,35 +33,31 @@
 	</main>
 	<footer>ecommerce</footer>
 	
-<style lang='scss' global>
-	@import "../style/global.scss";
-	// @import "../style/theme.scss";
+<style  global>
+	
 	main {
 		position: relative;
 		/* max-width: 56em; */
-		
 		padding: 2em;
 		margin: 0 auto;
-		// box-sizing: border-box;
+	}
+	footer {
+		position: fixed;
+		bottom: 0;
+		padding: 16px;
+		/* border-top: 1px solid $accent-color; */
+		width: 100%;
+		display: block;
+		text-align: center;
+		/* background: $glass; */
 
-}
-footer {
-	position: fixed;
-	bottom: 0;
-	padding: 16px;
-	border-top: 1px solid $accent-color;
-	width: 100%;
-	display: block;
-	text-align: center;
-	background: $glass;
-
-}
-hr {
-	color: $accent-color;
-	padding: 0;
-	margin: 0;
-	opacity: 0.25;
-}
+	}
+	hr {
+		/* color: $accent-color; */
+		padding: 0;
+		margin: 0;
+		opacity: 0.25;
+	}
 </style>
 
 

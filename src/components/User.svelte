@@ -97,8 +97,8 @@
 		
 				</section>
 		
-<style lang="scss" >
-@import '../style/theme.scss';
+<style>
+/* @import '../style/theme.scss'; */
 
   section {
     display: flex;
@@ -107,9 +107,9 @@
     justify-content: space-between;
     padding: 0rem 8px;
     height: 3rem;
-    border-top: 1px solid $primary-color;
-    border-bottom: 1px solid $accent-color;
-    background: $glass;
+    /* border-top: 1px solid $primary-color; */
+    /* border-bottom: 1px solid $accent-color; */
+    /* background: $glass; */
   }
 
   .form {
@@ -118,7 +118,7 @@
   }
   button {text-transform: uppercase;
   font-variant: normal;
-  // text-shadow: 1px 1px 0 $dark;
+  /* // text-shadow: 1px 1px 0 $dark; */
   }
 
 </style>
