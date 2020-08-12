@@ -1,17 +1,17 @@
 <script>
-  export let content
+  export let item
 </script>
 
 <div class="sheet"> 
   <div class="image">
-    <img src={content.image} alt={content.name}>
+    <img src={item.image} alt={item.name}>
   </div>
   <div class="txt">
-      <div>Produit: {content.name}</div>
-      <div>Description: {content.description}</div>
+      <div>Produit: {item.name}</div>
+      <div>Description: {item.description}</div>
 
       <!-- 3: Evaluations -->
-      {#each content.rates as rate}
+      {#each item.rates as rate}
         <div class="sheet">
           <div>
             <img class='avatar' src='{rate.avatar}' alt='{rate.author}'>

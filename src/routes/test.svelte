@@ -4,12 +4,12 @@
   import Category from '../components/main/ProductsCategory.svelte'
   import Detail from '../components/main/ProductDetail.svelte'
   let view = 'category'
-  let content = ''
+  let item = ''
   let cat = ''
 
   function voirDetail (event) {
     view = "detail"
-    content = event.detail
+    item = event.detail
   }
   function voirCategorie (event) {
     view = "category"
@@ -26,15 +26,18 @@
     <div on:click={voirCategorie}>Catégorie: {cat.name}</div>
     <!-- 2: produits -->
 
-    {#each cat.content as content}
+    {#each cat.content as item}
         {#if view == "category"}
-          <Card >
-            <Category on:voir={voirDetail} {content} >
-              <!-- <button on:click={() => view = "detail"}>voir produit</button> -->
-            </Category>
-          </Card>
-        {:else}
-          <Detail {content}>
+          <div class="grid">
+            <Card >
+              <Category on:voir={voirDetail} {item} >
+                <!-- <button on:click={() => view = "detail"}>voir produit</button> -->
+              </Category>
+              
+            </Card>
+          </div>
+        {:else if view == "detail"}
+          <Detail {item}>
 
           </Detail>
           <button on:click={() => view = "category"}>retour liste</button>
@@ -63,4 +66,12 @@ ul {
 }
 
 .image, img {max-width: 400px; max-height: 400px;}
+.grid {
+  width: 100%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto, 5fr);
+  justify-content: center;
+  /* grid-column */
+}
 </style>

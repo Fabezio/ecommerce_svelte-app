@@ -25,7 +25,7 @@
 	// $: console.log(rootUser)
 
 </script>	
-	<Nav {segment} {root} />
+	<Nav {segment} />
 	<hr>
 	<User {user} {root} {pw} />
 	<main>
@@ -42,7 +42,7 @@
 		
 		padding: 2em;
 		margin: 0 auto;
-		box-sizing: border-box;
+		// box-sizing: border-box;
 
 }
 footer {

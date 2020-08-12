@@ -7,11 +7,11 @@
 	// $: console.log('segment')
 	// $: console.log(typeof segment)
 	// $: console.log(segment)
-	const links = [
-		{link: '.', label: 'accueil', hasPrefetch: "false"},
-		{link: 'products', label: 'produits', hasPrefetch: "false"},
-		{link: 'about', label: 'à propos', hasPrefetch: "false"},
-	]
+	// const links = [
+	// 	{link: '.', label: 'accueil', hasPrefetch: "false"},
+	// 	{link: 'products', label: 'produits', hasPrefetch: "false"},
+	// 	{link: 'about', label: 'à propos', hasPrefetch: "false"},
+	// ]
 
 </script>
 

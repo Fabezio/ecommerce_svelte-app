@@ -46,15 +46,15 @@
 		    
 			<div class="form">
 				<label >Identifiant: 
-		        
-					<input type="text"bind:value={user} >
-					</label>
-					<label >Mot de passe: 
-		        
-						<input type="password" bind:value={pw} >
-						</label>
-						<button {disabled} class="success-btn" type="submit" on:click={submitForm}>entrer</button>
-					</div>
+          <input type="text"bind:value={user} >
+        </label>
+        
+        <label >Mot de passe: 
+          <input type="password" bind:value={pw} >
+        </label>
+        
+        <button {disabled} class="success-btn" type="submit" on:click={submitForm}>entrer</button>
+      </div>
 		  {:else}
 		    {#if !user.length}
 		      {#if firstLog}
